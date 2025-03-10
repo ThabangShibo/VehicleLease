@@ -1,0 +1,42 @@
+﻿@model VehicleLease.Models.Vehicle
+
+@{ 
+    ViewData["Title"] = "Capture Vehicle";
+}
+
+<h2> Capture Vehicle</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="VehicleMake" class="control-label">Vehicle Make</label>
+        <input asp-for="VehicleMake" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="VehicleModel" class="control-label">Vehicle Model</label>
+        <input asp-for="VehicleModel" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="VehicleMileage" class="control-label"> Vehicle Mileage</label>
+        <input asp-for="VehicleMileage" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SupplierName" class="control-label"> Supplier Name</label>
+        <input asp-for="SupplierName" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CustomerId" class="control-label"> Customer</label>
+        <input asp-for="CustomerId" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DriverId" class="control-label"> Driver</label>
+        <select asp-for="DriverId" asp-items="ViewBag.Drivers" class="form-control">
+            <option value=""> Select Driver</option>
+        </select>
+        
+    </div>
+</form>
